@@ -64,8 +64,7 @@ DOCKERFILE.ubuntu22.04 = docker/Dockerfile.ubuntu22.04
 DOCKERFILE.ubi9 = docker/Dockerfile.ubi9
 
 $(TARGETS):
-	$(DOCKERCMD) --pull \
-		--output $(OUTPUT) \
+	$(DOCKERCMD) --push \
 		--platform $(PLATFORMS) \
 		--build-arg "GOLANG_VERSION=$(GOLANG_VERSION)" \
 		--build-arg "DCGM_VERSION=$(DCGM_VERSION)" \
