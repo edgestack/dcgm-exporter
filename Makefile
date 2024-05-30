@@ -14,7 +14,7 @@
 
 include hack/VERSION
 
-REGISTRY             ?= nvidia
+REGISTRY             ?= registry.gitlab.com/sonaproject
 GO                   ?= go
 MKDIR                ?= mkdir
 GOLANGCILINT_TIMEOUT ?= 10m

@@ -31,6 +31,7 @@ var (
 	FailedToConvert = "ERROR - FAILED TO CONVERT TO STRING"
 
 	nvidiaResourceName      = "nvidia.com/gpu"
+	nvidiaResourcePrefix    = "nvidia.com/gpu-"
 	nvidiaMigResourcePrefix = "nvidia.com/mig-"
 	MIG_UUID_PREFIX         = "MIG-"
 

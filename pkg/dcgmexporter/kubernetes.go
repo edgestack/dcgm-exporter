@@ -147,10 +147,12 @@ func (p *PodMapper) toDeviceToPod(
 			for _, device := range container.GetDevices() {
 
 				resourceName := device.GetResourceName()
-				if resourceName != nvidiaResourceName {
-					// Mig resources appear differently than GPU resources
-					if !strings.HasPrefix(resourceName, nvidiaMigResourcePrefix) {
-						continue
+				if !strings.HasPrefix(resourceName, nvidiaResourcePrefix) {
+					if resourceName != nvidiaResourceName {
+						// Mig resources appear differently than GPU resources
+						if !strings.HasPrefix(resourceName, nvidiaMigResourcePrefix) {
+							continue
+						}
 					}
 				}
 
